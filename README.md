@@ -1,86 +1,93 @@
-# 🏨 HostelOS
-> **The Future of Hostel Management.**
+# HostelOS
+The Future of Hostel Management
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
-![Three.js](https://img.shields.io/badge/Three.js-black?style=for-the-badge&logo=three.js&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![React](https://img.shields.io/badge/react-18.x-blue)
+![FastAPI](https://img.shields.io/badge/fastapi-backend-green)
+![Three.js](https://img.shields.io/badge/three.js-3D-black)
+![Tailwind](https://img.shields.io/badge/tailwindcss-ui-38B2AC)
+![SQLite](https://img.shields.io/badge/sqlite-db-07405E)
 
-**HostelOS** upgrades the traditional hostel experience into a high-tech, digital ecosystem. From **3D Digital Twins** of the building to a student-run **Marketplace**, we automate the boring stuff so you can focus on the living.
+![API](https://img.shields.io/badge/api-rest-lightgrey)
+![Auth](https://img.shields.io/badge/auth-rbac-blueviolet)
+![Status](https://img.shields.io/badge/status-active-success)
 
----
+## Overview
+HostelOS is a full stack system designed to digitize hostel operations through structured backend services and a unified interface It replaces manual workflows with scalable modules for tracking access control and internal coordination
 
-## ✨ Visual Tour
+The platform integrates visualization data systems and role based permissions into a single environment enabling efficient and maintainable hostel management
 
-### 🖥️ Admin Dashboard
-*Real-time overview of occupancy, energy, and issues.*
-![Dashboard](./screenshots/dashboard.png)
+## System Design
 
-### 🌍 3D Digital Twin
-*Interactive, real-time visualization of hostel rooms and occupancy.*
-![3D Digital Twin](./screenshots/3d_twin.png)
+Client Layer  
+React based frontend handling UI rendering and state management  
 
-### 🛍️ Student Marketplace
-*A private, safe economy for students to buy and sell items.*
-![Marketplace](./screenshots/marketplace.png)
+API Layer  
+FastAPI service exposing modular endpoints  
 
----
+Data Layer  
+SQLite with structured schema and migration scripts  
 
-## 🚀 Key Features
+Control Layer  
+Role based access control for admin and student operations  
 
-*   **🌍 3D Digital Twin**: Navigate your hostel like a video game. See room status (Red/Yellow/Green) in real-time.
-*   **🛍️ Student Marketplace**: A specialized platform for students to sell books, gadgets, and furniture. **Students Only!**
-*   **🤖 AI Face Mess System**: Futuristic dining access using Face ID simulation and credit tracking.
-*   **📍 Smart Attendance**: Geolocation-based check-ins. No more long queues for attendance.
-*   **� Digital Mailroom**: Secure package tracking. Get a PIN, show it, take your parcel.
-*   **⚡ IoT Energy Monitoring**: Track simulated electricity usage per room and find power hogs.
-*   **🎟️ Digital Gate Pass**: QR-code based exit and entry logs.
+Visualization Layer  
+3D representation using React Three Fiber  
 
----
+## Core Modules
 
-## 🛠️ The Tech Stack
+Digital Twin  
+Real time room visualization mapped to backend state  
 
-*   **Frontend**: React 18, Vite, TailwindCSS, Lucide Icons, Recharts, React Three Fiber.
-*   **Backend**: FastAPI (Python), SQLAlchemy, SQLite.
-*   **Architecture**: Modular REST API with Role-Based Access Control (RBAC).
+Marketplace  
+Controlled student trading system  
 
----
+Mess System  
+Identity linked access with usage tracking  
 
-## ⚡ Quick Start Guide
+Attendance  
+Geolocation based validation system  
 
-### 1. Backend Setup
+Mailroom  
+Parcel tracking with secure verification  
+
+Energy Monitoring  
+Room level usage tracking and aggregation  
+
+Gate Pass  
+QR based entry system with logs  
+
+## Getting Started
+
+Backend
 ```bash
 cd backend
 python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+source venv/bin/activate
 pip install -r requirements.txt
 
-# Initialize Database
 python migrate_db.py
 python migrate_parcels.py
-python migrate_marketplace.py 
-# (Run other migrate scripts as needed)
+python migrate_marketplace.py
 
 uvicorn main:app --reload
 ```
 
-### 2. Frontend Setup
+Frontend
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
----
+## Access
 
-## � Demo Credentials
+Admin  
+username admin  
+password admin  
 
-| Portal | Username / Phone | Password |
-| :--- | :--- | :--- |
-| **Admin** | `admin` | `admin` |
-| **Student** | `9328994892` | `9328994892` |
+Student  
+username 9328994892  
+password 9328994892  
 
----
-
-*Built with ❤️ for the Entupr Hackathon.*
+## Notes
+Built as a hackathon project and extended into a system design focused backend platform
